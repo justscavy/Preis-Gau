@@ -1,9 +1,9 @@
 # WISHScraper Offers 
 
-Mr.Nice — 12/07/2023 14:58
+unknown — 12/07/2023 14:58
 sorry das ich auf deine idee da so erstmal nicht naeher eingehen kann als etwas pesimistisch davon ausgehen das es sowas schon gibt
 
-dirgnirg — 18/07/2023 16:15
+unknown — 18/07/2023 16:15
 kostenloser app download
 was user nicht wissen: werbung kommt als eintrag auf den einkaufszettel
 "hm, wc-steine... hab ich doch gar nicht aufgeschrieben"
