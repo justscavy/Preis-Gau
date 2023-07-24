@@ -1,0 +1,15 @@
+{
+   
+    "configurations": [
+        
+        {
+            "name": "sql",
+            "type": "python",
+            "request": "launch",
+            "program": "mysql.py",
+            "args": [], 
+            "console": "internalConsole",
+            "justMyCode": true
+        }
+    ]
+}

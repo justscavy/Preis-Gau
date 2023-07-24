@@ -3,11 +3,15 @@ from dataclasses import dataclass
 from utils import Market
 
 
+
 @dataclass
 class Offer:
     product: str
     price: str
     market: Market
+    validation: str
+
+
 
 
 # @dataclass

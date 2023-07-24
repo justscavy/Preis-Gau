@@ -60,18 +60,19 @@ def main():
     total_price = 0
 
     if found_offers:
-        print("EDEKA\n")        
+        print("EDEKA")        
         for offer in found_offers:
             product = offer.product = offer.product.strip()
             price_str = offer.price.strip().replace("€", "").replace(",",".")   
             price = float(price_str)
             total_price += price           
             print(f"{offer.product.strip()}: {offer.price.strip()}")       # adding euro symbol?
+   
     print("\nTotal price: {:.2f}\n\n\n".format(total_price))
 
     
     if found_offers2:
-        print("REWE\n")
+        print("REWE")
         for offer in found_offers2:
             product = offer.product = offer.product.strip()
             price_str_REWE = offer.price.strip().replace("€", "").replace(",",".")
