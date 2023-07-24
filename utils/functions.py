@@ -10,8 +10,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 
 VERSION = "1.0.0"
-from utils import HTML_CLASS_NAME_EDEKA, Market
-from utils import HTML_CLASS_NAME_REWE, Market
+from utils import HTML_CLASS_NAMES, Market
 from classes.offer import Offer
 
 
@@ -30,11 +29,11 @@ def get_html(url: str) -> str:
 def extract_offers(html: BeautifulSoup) -> list[Offer]:
     """Extract EDEKA offers from its offer tiles."""                                                                                      
     offers: list[Offer] = []                                                               
-    offer_tiles: list[PageElement] = html.find_all(class_=HTML_CLASS_NAME_EDEKA['offer_tile'])   
+    offer_tiles: list[PageElement] = html.find_all(class_=HTML_CLASS_NAMES['EDEKA']['offer_tile'])   
     for offer_tile in offer_tiles:                                                                                 
-        product: str | None = offer_tile.find(class_=HTML_CLASS_NAME_EDEKA['product_tile'])      
-        price: str | None = offer_tile.find(class_=HTML_CLASS_NAME_EDEKA['price_tile'])       
-        validation: str | None = offer_tile.find(class_=HTML_CLASS_NAME_EDEKA['validation_tile'])
+        product: str | None = offer_tile.find(class_=HTML_CLASS_NAMES['EDEKA']['product_tile'])      
+        price: str | None = offer_tile.find(class_=HTML_CLASS_NAMES['EDEKA']['price_tile'])       
+        validation: str | None = offer_tile.find(class_=HTML_CLASS_NAMES['EDEKA']['validation_tile'])
         if product and price:
             offer: Offer = Offer(
                 product=product.text.strip(),
@@ -46,14 +45,15 @@ def extract_offers(html: BeautifulSoup) -> list[Offer]:
             offers.append(offer)
     return offers
 
+
 def extract_offers2(html: BeautifulSoup) -> list[Offer]:
     """Extract REWE offers from its offer tiles."""                                                                                      
     offers2: list[Offer] = []                                                               
-    offer_tiles2: list[PageElement] = html.find_all(class_=HTML_CLASS_NAME_REWE['offer_tile'])   
+    offer_tiles2: list[PageElement] = html.find_all(class_=HTML_CLASS_NAMES['REWE']['offer_tile'])   
     for offer_tile in offer_tiles2:                                                                                 
-        product: str | None = offer_tile.find(class_=HTML_CLASS_NAME_REWE['product_tile'])      
-        price: str | None = offer_tile.find(class_=HTML_CLASS_NAME_REWE['price_tile'])  
-        validation: str | None = offer_tile.find(class_=HTML_CLASS_NAME_REWE['validation_tile'])
+        product: str | None = offer_tile.find(class_=HTML_CLASS_NAMES['REWE']['product_tile'])      
+        price: str | None = offer_tile.find(class_=HTML_CLASS_NAMES['REWE']['price_tile'])  
+        validation: str | None = offer_tile.find(class_=HTML_CLASS_NAMES['REWE']['validation_tile'])
         if product and price:
             offer2: Offer = Offer(
                 product=product.text.strip(),

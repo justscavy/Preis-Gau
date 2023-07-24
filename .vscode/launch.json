@@ -14,6 +14,14 @@
             "args": ["-pn", "milch"], 
             "console": "internalConsole",
             "justMyCode": true
+        },
+        {
+            "name": "mysql test",
+            "type": "python",
+            "request": "launch",
+            "program": "mysql.py",
+            "console": "internalConsole",
+            "justMyCode": true
         }
     ]
 }
