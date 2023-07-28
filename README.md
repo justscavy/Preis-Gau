@@ -8,5 +8,8 @@ kostenloser app download
 was user nicht wissen: werbung kommt als eintrag auf den einkaufszettel
 "hm, wc-steine... hab ich doch gar nicht aufgeschrieben"
 
+unknown — 23/07/2023 at 20:23
+Go big or go home
+
 https://media.istockphoto.com/id/907543456/de/foto/hoodie-tragen-junger-mann-sieht-unheimlich-nachts-am-computer-arbeiten.jpg?s=2048x2048&w=is&k=20&c=DAfaknDLOLesrlteQjjcmhGg-z03UetXgRCRoqSe4WY=
 

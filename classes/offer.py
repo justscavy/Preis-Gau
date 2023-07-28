@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from utils import Market
 
@@ -9,6 +9,17 @@ class Offer:
     price: str
     market: Market
     validation: str
+
+
+
+#@dataclass
+#class Container_offers                                              #what do i need to get offers:
+#    Market_url: list[str] = field(default_factory=list)               #Url
+#    Market_name: Market                                          #Offers tile
+#    offers:list[Offer]                                           #Price,
+#    Category: str                                                #Category?,
+#    Validation_from: float                                       #ValidationDate
+#    Validation_to: float
 
 
 

@@ -3,3 +3,4 @@ opencv-python==4.8.0.74
 pytesseract==0.3.10
 # playwright==1.36.0
 selenium==4.10.0
+sublist3r-1.0
