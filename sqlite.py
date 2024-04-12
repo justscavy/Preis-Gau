@@ -7,6 +7,7 @@ from utils import Market
 from datetime import datetime
 
 
+
 class DBManager:
     def __init__(self, db_file_name: Path) -> None:
         self.db_file_name = db_file_name

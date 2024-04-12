@@ -21,8 +21,6 @@ args = parser.parse_args()
 
 
 
-
-
 def get_offers(url):   #edeka
     html_source: str = get_html(url=url)
     html: BeautifulSoup = BeautifulSoup(markup=html_source, features='html.parser')
