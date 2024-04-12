@@ -9,6 +9,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 
+
 VERSION="1.0.0"
 
 parser = argparse.ArgumentParser(description="Search for offers with a product name or image.\nExample: python3 main.py -pn 'name'",

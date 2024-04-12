@@ -59,32 +59,42 @@ def main():
     total_price_REWE = 0
     total_price = 0
 
+# For EDEKA
     if found_offers:
-        print("EDEKA")        
+        print("EDEKA\n")        
         for offer in found_offers:
-            product = offer.product = offer.product.strip()
+            product_parts = offer.product.split(" ", 1)  # Splitting the product name by whitespace, considering only the first split
+            if len(product_parts) > 1:  # Ensuring there's more than one part after splitting
+                product_name = product_parts[1]  # Taking all parts except the first one
+            else:
+                product_name = offer.product  # If only one part, consider the whole product name
+            product = product_name.strip()
             price_str = offer.price.strip().replace("€", "").replace(",",".")   
             price = float(price_str)
             total_price += price           
-            print(f"{offer.product.strip()}: {offer.price.strip()}")       # adding euro symbol?
-   
+            print(f"{offer.product}: {offer.price.strip()}")  # Printing the full product name
     print("\nTotal price: {:.2f}\n\n\n".format(total_price))
 
-    
+    # For REWE
     if found_offers2:
-        print("REWE")
+        print("REWE\n")
         for offer in found_offers2:
-            product = offer.product = offer.product.strip()
+            product_parts_REWE = offer.product.split(" ", 1)  # Splitting the product name by whitespace, considering only the first split
+            if len(product_parts_REWE) > 1:  # Ensuring there's more than one part after splitting
+                product_name_REWE = product_parts_REWE[1]  # Taking all parts except the first one
+            else:
+                product_name_REWE = offer.product  # If only one part, consider the whole product name
+            product_REWE = product_name_REWE.strip()
             price_str_REWE = offer.price.strip().replace("€", "").replace(",",".")
             price_REWE = float(price_str_REWE)
             total_price_REWE += price_REWE  
-            print(f"{offer.product.strip()}: {offer.price.strip()}")
+            print(f"{offer.product}: {offer.price.strip()}")
     else:
         print("REWE")
         print("no offers found")
         sys.exit()
     print("\nTotal price: {:.2f}\n".format(total_price_REWE))
-    
+
 
 
    

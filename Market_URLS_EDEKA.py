@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from dataclasses import dataclass
 from bs4.element import PageElement
 
+
 class Market(Enum):
     MARKET1 = "https://www.edeka.de/eh"
     MARKET2 = "https://www.rewe.de/angebote"

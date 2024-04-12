@@ -4,6 +4,7 @@ from main import get_offers, get_offers_2
 from utils import Market
 
 
+
 edeka_url: str = 'https://www.edeka.de/eh/s%C3%BCdwest/edeka-barwig-z%C3%A4hringer-stra%C3%9Fe-344/angebote.jsp'
 rewe_url: str = "https://www.rewe.de/angebote/gundelfingen/831300/rewe-markt-alte-bundesstr-68-70/"
 

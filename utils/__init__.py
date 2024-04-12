@@ -1,6 +1,7 @@
 from enum import Enum, auto
 
 
+
 class Market(Enum):                             
    """Provide market names, which are already implemented."""
    EDEKA = auto()
