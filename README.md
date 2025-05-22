@@ -1,15 +1,26 @@
-# WISHScraper Offers 
+Project Preis-Gau
+The project was developed from the ground up with a simple idea in mind:
+Enable users who still jot down their grocery lists with pen and paper to effortlessly compare current offers and promotions from nearby supermarkets. By simply taking a photo of their handwritten list, users can discover the best deals available across major German retail chains.
 
-unknown — 12/07/2023 14:58
-sorry das ich auf deine idee da so erstmal nicht naeher eingehen kann als etwas pesimistisch davon ausgehen das es sowas schon gibt
+Supported Stores
+The following supermarket chains are currently integrated into the system:
 
-unknown — 18/07/2023 16:15
-kostenloser app download
-was user nicht wissen: werbung kommt als eintrag auf den einkaufszettel
-"hm, wc-steine... hab ich doch gar nicht aufgeschrieben"
+Aldi Süd
+Aldi Nord
+Rewe (via official API)
+Edeka
+Lidl
 
-unknown — 23/07/2023 at 20:23
-Go big or go home
+Each of these retailers uses a unique and frequently changing data structure for presenting their weekly offers. This poses a particular challenge for consistent parsing and data normalization—especially in the case of Edeka, where structural inconsistencies and errors in their web content make it difficult to extract data reliably.
 
-https://media.istockphoto.com/id/907543456/de/foto/hoodie-tragen-junger-mann-sieht-unheimlich-nachts-am-computer-arbeiten.jpg?s=2048x2048&w=is&k=20&c=DAfaknDLOLesrlteQjjcmhGg-z03UetXgRCRoqSe4WY=
+Technical Overview
+OCR Engine: pytesseract is used to convert images of handwritten grocery lists into machine-readable text.
 
+Web Scraping: BeautifulSoup is utilized to scrape product data from all retailer websites except Rewe, which provides access via a public API.
+
+Challenges
+Inconsistent Data Formats: Each store presents its data differently, and often changes these formats without notice.
+
+Error-Prone Sources: Especially with Edeka, where malformed HTML or missing information can interrupt the parsing process.
+
+Homogenization Complexity: Creating a unified structure for storage and filtering is non-trivial due to the above challenges.
