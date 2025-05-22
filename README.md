@@ -33,7 +33,3 @@ The following supermarkets are currently integrated into the system:
 - Build a robust data normalization pipeline.
 - Add more stores and support international retailers.
 - Create a user-friendly front-end for broader accessibility.
-
----
-
-Feel free to adapt or expand on this depending on the audience (technical, non-technical, contributors, etc.). Let me know if you want to include diagrams, code examples, or architecture overviews.
