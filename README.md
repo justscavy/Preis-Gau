@@ -1,26 +1,39 @@
-Project Preis-Gau
-The project was developed from the ground up with a simple idea in mind:
-Enable users who still jot down their grocery lists with pen and paper to effortlessly compare current offers and promotions from nearby supermarkets. By simply taking a photo of their handwritten list, users can discover the best deals available across major German retail chains.
+## Project Preis-Gau
 
-Supported Stores
-The following supermarket chains are currently integrated into the system:
+**Project Preis-Gau** was developed from scratch with a simple idea:  
+Allow users who still write their grocery lists with pen and paper to take a photo and instantly compare offers and promotions from nearby supermarkets.
 
-Aldi Süd
-Aldi Nord
-Rewe (via official API)
-Edeka
-Lidl
+By leveraging OCR and data scraping, the project enables quick and convenient price comparisons across several major German retailers.
 
-Each of these retailers uses a unique and frequently changing data structure for presenting their weekly offers. This poses a particular challenge for consistent parsing and data normalization—especially in the case of Edeka, where structural inconsistencies and errors in their web content make it difficult to extract data reliably.
+## Supported Stores
 
-Technical Overview
-OCR Engine: pytesseract is used to convert images of handwritten grocery lists into machine-readable text.
+The following supermarkets are currently integrated into the system:
 
-Web Scraping: BeautifulSoup is utilized to scrape product data from all retailer websites except Rewe, which provides access via a public API.
+- **Aldi Süd**
+- **Aldi Nord**
+- **Rewe**
+- **Edeka**
+- **Lidl**
 
-Challenges
-Inconsistent Data Formats: Each store presents its data differently, and often changes these formats without notice.
+## Technical Stack
 
-Error-Prone Sources: Especially with Edeka, where malformed HTML or missing information can interrupt the parsing process.
+- **OCR**: [pytesseract](https://github.com/madmaze/pytesseract) is used to convert handwritten lists into text.
+- **Web Scraping**: [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) is used to extract offer data from store websites (except Rewe).
+- **API Integration**: Rewe provides an API, which is used to fetch structured offer data directly.
 
-Homogenization Complexity: Creating a unified structure for storage and filtering is non-trivial due to the above challenges.
+## Key Challenges
+
+- **Inconsistent Data Structures**: Each store formats its data differently and frequently changes these formats, requiring constant adjustments.
+- **Faulty Data (Edeka)**: Edeka’s data often includes structural errors or inconsistencies, making reliable extraction difficult.
+- **Data Homogenization**: Unifying the scraped and parsed data into a consistent format for filtering and storage is a non-trivial task due to the varying data sources.
+
+## Future Goals
+
+- Improve OCR accuracy for handwritten lists.
+- Build a robust data normalization pipeline.
+- Add more stores and support international retailers.
+- Create a user-friendly front-end for broader accessibility.
+
+---
+
+Feel free to adapt or expand on this depending on the audience (technical, non-technical, contributors, etc.). Let me know if you want to include diagrams, code examples, or architecture overviews.
